@@ -59,11 +59,11 @@ hist_layout = row(
 )
 
 
-reset_button = Button(label="Reset", button_type="default", width=145)
+reset_button = Button(label="Clear All", button_type="default", width=145)
 
 
 def reset_button_callback():
-    stats.reset()
+    stats.clear()
     # Clear stream graph manually
     for source in sv_streamgraph._sources:
         if source.data["x"]:
